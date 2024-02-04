@@ -11,20 +11,20 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
 
-public class GradientIndicator extends AppCompatTextView {
+public class GradientText extends AppCompatTextView {
 
-    Paint paint = new Paint();
+    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private float mProgress = 0f;
 
-    public GradientIndicator(@NonNull Context context) {
+    public GradientText(@NonNull Context context) {
         super(context);
     }
 
-    public GradientIndicator(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public GradientText(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public GradientIndicator(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public GradientText(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 

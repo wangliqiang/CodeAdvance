@@ -13,7 +13,7 @@
         android:theme="@style/Theme.CodeAdvance"
         tools:targetApi="31">
         <activity
-            android:name=".indicator.GradientIndicatorActivity"
+            android:name=".indicator.GradientTextActivity"
             android:exported="false" />
         <activity
             android:name=".flowlayout.FlowLayoutActivity"

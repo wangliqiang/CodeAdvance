@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".indicator.GradientIndicatorActivity">
+    tools:context=".indicator.GradientTextActivity">
 
-    <com.app.codeadvance.widget.GradientIndicator
+    <com.app.codeadvance.widget.GradientText
         android:id="@+id/gradient_indicator"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.app.codeadvance.databinding.ActivityMainBinding
 import com.app.codeadvance.flowlayout.FlowLayoutActivity
-import com.app.codeadvance.indicator.GradientIndicatorActivity
+import com.app.codeadvance.indicator.GradientTextActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, FlowLayoutActivity::class.java))
         }
         binding.customIndicatorBtn.setOnClickListener {
-            startActivity(Intent(this, GradientIndicatorActivity::class.java))
+            startActivity(Intent(this, GradientTextActivity::class.java))
         }
     }
 }

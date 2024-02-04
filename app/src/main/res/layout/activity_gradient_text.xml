@@ -1,13 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".indicator.GradientTextActivity">
 
-    <com.app.codeadvance.widget.GradientText
-        android:id="@+id/gradient_indicator"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <com.app.codeadvance.widget.GradientTextView
+            android:id="@+id/focus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:text="关注"
+            app:text_color="#ff000000"
+            app:text_color_change="#ffff0000"
+            app:text_size="20sp" />
+
+        <com.app.codeadvance.widget.GradientTextView
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:text="首页"
+            app:text_color="#ff000000"
+            app:text_color_change="#ffff0000"
+            app:text_size="20sp" />
+
+        <com.app.codeadvance.widget.GradientTextView
+            android:id="@+id/hot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:text="热点"
+            app:text_color="#ff000000"
+            app:text_color_change="#ffff0000"
+            app:text_size="20sp" />
+
+        <com.app.codeadvance.widget.GradientTextView
+            android:id="@+id/recommend"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:text="推荐"
+            app:text_color="#ff000000"
+            app:text_color_change="#ffff0000"
+            app:text_size="20sp" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFE6DADA"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 </LinearLayout>

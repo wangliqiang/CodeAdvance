@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
 
         clickEvent()
 
-        binding.countdonwview.setCountdownTime(10)
     }
 
     private fun clickEvent() {
@@ -29,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, GradientTextActivity::class.java))
         }
         binding.fishBtn.setOnClickListener {
-            startActivity(Intent(this,FishActivity::class.java))
+            startActivity(Intent(this, FishActivity::class.java))
         }
     }
 }

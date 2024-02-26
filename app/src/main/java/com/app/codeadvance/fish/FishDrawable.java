@@ -84,7 +84,6 @@ public class FishDrawable extends Drawable {
     private float finsAngle = 1f;
 
 
-
     public FishDrawable() {
         init();
     }
@@ -196,7 +195,7 @@ public class FishDrawable extends Drawable {
 
     private PointF makeSegment(Canvas canvas, PointF bottomCenterPoint, float bigRadius, float smallRadius,
                                float findSmallCircleLength, float fishAngle, boolean hasBigCircle) {
-        float segmentAngle ;
+        float segmentAngle;
 
         if (hasBigCircle) {
             segmentAngle = (float) (fishAngle + Math.cos(Math.toRadians(animatedValue * 1.5 * frequence)) * 15);

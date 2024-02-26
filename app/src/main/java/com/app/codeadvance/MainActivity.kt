@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.app.codeadvance.databinding.ActivityMainBinding
+import com.app.codeadvance.fish.FishActivity
 import com.app.codeadvance.flowlayout.FlowLayoutActivity
 import com.app.codeadvance.indicator.GradientTextActivity
 
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         clickEvent()
+
+        binding.countdonwview.setCountdownTime(10)
     }
 
     private fun clickEvent() {
@@ -24,6 +27,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.customIndicatorBtn.setOnClickListener {
             startActivity(Intent(this, GradientTextActivity::class.java))
+        }
+        binding.fishBtn.setOnClickListener {
+            startActivity(Intent(this,FishActivity::class.java))
         }
     }
 }

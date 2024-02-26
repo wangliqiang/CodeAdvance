@@ -13,6 +13,9 @@
         android:theme="@style/Theme.CodeAdvance"
         tools:targetApi="31">
         <activity
+            android:name=".fish.FishActivity"
+            android:exported="false" />
+        <activity
             android:name=".indicator.GradientTextActivity"
             android:exported="false" />
         <activity

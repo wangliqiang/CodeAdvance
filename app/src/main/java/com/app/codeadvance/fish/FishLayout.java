@@ -116,16 +116,13 @@ public class FishLayout extends RelativeLayout {
 
         final PathMeasure pathMeasure = new PathMeasure(path, false);
         final float[] tan = new float[2];
-        objectAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                float animator = (float) animation.getAnimatedValue();
-                fishDrawable.setFinsAngle(animator * 0.1f);
-                float fraction = animation.getAnimatedFraction();
-                pathMeasure.getPosTan(pathMeasure.getLength() * fraction, null, tan);
-                float angle = (float) Math.toDegrees(Math.atan2(-tan[1], tan[0]));
-                fishDrawable.setFishMainAngle(angle);
-            }
+        objectAnimator.addUpdateListener(animation -> {
+            float animator = (float) animation.getAnimatedValue();
+            fishDrawable.setFinsAngle(animator * 0.1f);
+            float fraction = animation.getAnimatedFraction();
+            pathMeasure.getPosTan(pathMeasure.getLength() * fraction, null, tan);
+            float angle1 = (float) Math.toDegrees(Math.atan2(-tan[1], tan[0]));
+            fishDrawable.setFishMainAngle(angle1);
         });
         objectAnimator.start();
     }

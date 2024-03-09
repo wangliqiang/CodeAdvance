@@ -2,8 +2,6 @@ package com.app.codeadvance
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.app.codeadvance.databinding.ActivityMainBinding
 import com.app.codeadvance.fish.FishActivity
@@ -12,8 +10,6 @@ import com.app.codeadvance.indicator.GradientTextActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
-    private val handler:Handler = Handler(Looper.getMainLooper())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
